@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">zbar</string>
+    <string name="title_activity_test_scan">TestScanActivity</string>
+    <string name="title_activity_test_generatectivity">TestGeneratectivity</string>
+</resources>
