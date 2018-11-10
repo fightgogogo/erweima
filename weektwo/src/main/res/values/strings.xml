@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">weektwo</string>
+    <string name="title_activity_regis">RegisActivity</string>
+    <string name="title_activity_show">ShowActivity</string>
+</resources>
