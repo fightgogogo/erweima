@@ -1,52 +1,52 @@
-package com.gx.zbar;
+package com.gx.gaoxin20181112.activity;
 
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
+import com.gx.gaoxin20181112.R;
 
 import cn.bingoogolapple.qrcode.core.QRCodeView;
 import cn.bingoogolapple.qrcode.zxing.ZXingView;
 
-public class TestScanActivity extends AppCompatActivity implements QRCodeView.Delegate {
+public class ThreeActivity extends AppCompatActivity implements QRCodeView.Delegate{
 
-    private ZXingView mZXingView;
-    private static final String TAG = TestScanActivity.class.getSimpleName();
+    private ZXingView zXingView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_scan);
-        mZXingView = findViewById(R.id.zxingview);
+        //find view
+        setContentView(R.layout.activity_three);
+        zXingView = findViewById(R.id.zxingview);
         //打开后置摄像头
-        mZXingView.startCamera();
+        zXingView.stopCamera();
         //监听
-        mZXingView.setDelegate(this);
+        zXingView.setDelegate(this);
         //开始扫描
-        mZXingView.startSpot();
+        zXingView.startSpot();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mZXingView.onDestroy();
+        zXingView.onDestroy();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mZXingView.startSpot();
+        zXingView.startSpot();
     }
 
     @Override
     public void onScanQRCodeSuccess(String result) {
-        //扫描的结果也就是result   只要开始扫描就会调用这个方法  吐司
-        Toast.makeText(TestScanActivity.this,""+result,Toast.LENGTH_SHORT).show();
-        TestScanActivity.this.finish();
+        Toast.makeText(ThreeActivity.this,""+result,Toast.LENGTH_SHORT).show();
+        ThreeActivity.this.finish();
     }
 
     @Override
@@ -56,5 +56,6 @@ public class TestScanActivity extends AppCompatActivity implements QRCodeView.De
 
     @Override
     public void onScanQRCodeOpenCameraError() {
+
     }
 }

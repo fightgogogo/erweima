@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TwoActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/erweima"
+                android:src="@drawable/sao1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:background="@drawable/circle"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:hint="请输入要搜索的文字"
+                android:layout_height="50dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="商品分类"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <GridView
+                android:layout_marginTop="10dp"
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:numColumns="3"
+                ></GridView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp">
+    <!--            <TextView
+                    android:background="#11d65e13"
+                    android:text="公告"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />-->
+                <TextView
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="噶 多 开 几 个 可 是 到 了 就 概 括 了 设 计 风 的 撒 感 动 时 刻 关 键 是  的空 间 格 看 来更 加快 速的克鲁格教授可根据是否考虑过"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <GridView
+            android:id="@+id/twogridview"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:numColumns="2"
+            ></GridView>
+        
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

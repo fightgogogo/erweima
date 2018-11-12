@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">gaoxin20181112</string>
+    <string name="title_activity_two">TwoActivity</string>
+    <string name="title_activity_three">ThreeActivity</string>
+</resources>
